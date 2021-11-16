@@ -1,5 +1,8 @@
 import sys
 import math
+import argparse as ap
+
+sys.stdin = open("./tests/1.txt","r")
 
 prio = ['O', 'N', 'E', 'S']
 full_map = list()
@@ -28,13 +31,13 @@ def print_full_m():
     for l in full_map:
         print(l) 
 
-
 l, c = [int(i) for i in input().split()]
 
 for i in range(l):
-    row = input()
-    full_map.append([c for c in row])
-    m.append([c for c in row[1:-1]])
+	row = input()
+	print(row)
+	full_map.append([c for c in row])
+	m.append([c for c in row[1:-1]])
 
 m.pop(0)
 m.pop()
