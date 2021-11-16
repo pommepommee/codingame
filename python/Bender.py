@@ -2,7 +2,12 @@ import sys
 import math
 import argparse as ap
 
-sys.stdin = open("./tests/1.txt","r")
+parser = ap.ArgumentParser(description="Test filename")
+parser.add_argument("test_filename", type=str, help="Test filename")
+
+args = parser.parse_args()
+
+sys.stdin = open(args.test_filename,"r")
 
 prio = ['O', 'N', 'E', 'S']
 full_map = list()
